@@ -17,3 +17,20 @@ Out of scope:
 * content management like image storage.
 * inventory. The products will be just enabled or disabled.
 
+
+
+For local development:
+
+```bash
+cd db ; ./build ; cd ..
+docker-compose up -d
+
+# Follow the logs with: docker logs db -f
+# Once the message "/usr/sbin/mysqld: ready for connections." is displayed you can setup the database by running the command:
+docker exec -it db bash -c "mysql -uroot -ptest < /simple-web.sql"
+
+# The app will be available here:
+#  API:    http://localhost:8080/backend/
+#  Front:  http://localhost:8080/frontend/
+```
+
