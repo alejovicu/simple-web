@@ -52,7 +52,11 @@ Response:
 ```json
 {}
 ```
-- Get Product: [GET] | `api/product/?langCode=US&reference=XXXXX`
+- Get Product: [GET] | `api/product`
+Request:
+
+* langCode:  string. get param. required
+* reference: string. get param. required
 
 Response:
 ```json
@@ -69,7 +73,7 @@ Response:
 }
 ```
 
-- Get Products by tags and language: [GET] | `api/product/?langCode=US&tags=[tags, ...]`
+- Get Products by tags and language: [GET] | `api/products/?langCode=US&tags=[tags, ...]`
 
 Response:
 ```json
